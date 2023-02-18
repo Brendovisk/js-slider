@@ -109,3 +109,25 @@ ul {
 .arrow-nav img {
   width: 22px;
 }
+
+[data-control="slide"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 12px;
+}
+
+[data-control="slide"] li a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #777;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+[data-control="slide"] li.active a,
+[data-control="slide"] li a:hover {
+    background-color: #ddd;
+}
