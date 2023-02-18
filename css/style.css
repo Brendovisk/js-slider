@@ -11,13 +11,6 @@ html {
   color-scheme: dark light;
 }
 
-body {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -58,7 +51,6 @@ ul {
   transform: scale(1);
 }
 
-
 .arrow-nav {
   position: absolute;
   top: 50%;
@@ -85,7 +77,7 @@ ul {
   transition: 0.3s;
   position: relative;
   backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, .22);
+  background-color: rgba(0, 0, 0, 0.22);
 }
 
 .arrow-nav button::before {
@@ -110,24 +102,31 @@ ul {
   width: 22px;
 }
 
-[data-control="slide"] {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 12px;
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
-[data-control="slide"] li a {
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-color: #777;
-    border-radius: 50%;
-    overflow: hidden;
-    text-indent: -999px;
+.control-item {
+  opacity: 0.8;
+  transform: scale(0.8);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  transition: .3s;
 }
 
-[data-control="slide"] li.active a,
-[data-control="slide"] li a:hover {
-    background-color: #ddd;
+.control-item button {
+  cursor: pointer;
+}
+
+.control-item.active {
+  opacity: 1;
+  transform: scale(1);
 }
