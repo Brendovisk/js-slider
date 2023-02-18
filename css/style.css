@@ -1,35 +1,50 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 html {
-    color-scheme: dark light;
+  color-scheme: dark light;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .slide-wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .slide {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.slide:hover {
+  will-change: transform;
 }
 
 .slide-item {
-    flex-shrink: 0;
-    width: 80vw;
-    max-width: 800px;
+  flex-shrink: 0;
+  width: 80vw;
+  max-width: 800px;
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.4s;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.slide-item.active {
+  opacity: 1;
+  transform: scale(1);
 }
